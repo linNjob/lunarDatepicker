@@ -1,0 +1,16 @@
+{
+  "name": "lunar-datepicker",
+  "version": "1.0.0",
+  "description": "農曆月曆",
+  "main": "lunar-datepicker-1.0.0.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/linNjob/lunarDatepicker.git"
+  },
+  "keywords": [],
+  "author": "brian wu",
+  "license": "ISC"
+}
