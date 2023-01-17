@@ -34,7 +34,7 @@ Include files JS:
 ### Usage
 
 html:
-```
+```html
 <div class="dateBox">
   <input data-toggle="datepicker" id="dataTage">
   <label for="dataTage"><i class="fa-solid fa-calendar-days"></i></label>
@@ -43,7 +43,7 @@ html:
 ```
 
 JS:
-```
+```js
 $(function () {
   $('[data-toggle="datepicker"]').datepicker({
     format: 'YYYY 年 MM 月 DD 日',
