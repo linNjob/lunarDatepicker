@@ -10,7 +10,7 @@ lunar-datepicker/
 ├── js/
 │   ├── jquery-3.6.3.min.js
 │   ├── datepicker1.0.10.js 
-│   ├── lunar-datepicker-1.0.0.js
+│   └── lunar-datepicker-1.0.0.js
 ├── index.html
 └── README.md
 ```
