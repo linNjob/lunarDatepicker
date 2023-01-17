@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lunar-datepicker 1.0.0</title>
+    <link rel="stylesheet" href="css/datepicker-1.0.10.min.css">
+    <link rel="stylesheet" href="css/lunar-datepicker.css">
+  </head>
+  <body>
+    <div class="dateBox">
+      <input data-toggle="datepicker" id="dataTage">
+      <label for="dataTage"><i class="fa-solid fa-calendar-days"></i></label>
+    </div>
+    <div id="datepickerBox"></div>
+
+    <script src="jquery-3.6.3.min.js"></script>
+    <script src="js/datepicker1.0.10.js"></script>
+    <script src="https://kit.fontawesome.com/30b29e4428.js"></script> <!-- 請更新成自己的 icon -->
+    <script src="js/lunar-datepicker-1.0.0.js"></script>
+
+    <script>
+      // 參考  https://fengyuanchen.github.io/datepicker/
+      $(function () {
+        $('[data-toggle="datepicker"]').datepicker({
+          format: 'YYYY 年 MM 月 DD 日',  // format: 'YYYY-MM-DD hh:mm:ss',  
+          date: new Date(), // 預設當天日期 new Date(2023, 1, 14), 
+          autoPick: true, // input 一開始顯示預設日期
+          container: '#datepickerBox', // 月曆顯示位置
+          inline: true, // 月曆直接顯示
+
+          // 預設可選範圍 格式依據 format
+          // startDate: new Date(),
+          // endDate: '2023/01/20',
+
+          // 起始星期 1 2 3 4 5 6 7
+          weekStart: 7,
+          yearFirs: true,
+
+          filter: function(date, view) { 
+            $('[data-view="day"] span').innerHTML == null ? setTimeout('funLunarData()') : '';
+          },
+        })
+      });
+    </script>
+  </body>
+</html>

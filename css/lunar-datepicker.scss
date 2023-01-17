@@ -1,0 +1,154 @@
+$W: 400px;
+
+body{
+  font-family: "Century Gothic", "PingFang TC", sans-serif;
+  color: #595757;
+}
+.dateBox{
+  position: relative;
+  width: $W;
+  display: flex;
+  label{
+    width: 40px;
+    height: 40px;
+    font-size: 23px;
+    color: #ffc03d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(235, 111, 2, 0.65);
+  }
+}
+
+#dataTage{
+  height: 40px;
+  padding: 8px;
+  font-size: 21px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 2px solid #e7eefc;
+  text-align: center;
+}
+#datepickerBox{
+  margin-top: 8px;
+}
+.datepicker-container{
+  border: 2px dashed #fab528;
+  // position: relative;
+  width: $W;
+  border-radius: 8px;
+  overflow: hidden;
+  &:before,
+  &:after{
+    display: none;
+  }
+  .datepicker-panel{
+    ul{
+      width: 100%;
+      &:nth-child(1){
+        li{
+          height: 40px;
+          font-size: 17px;
+          line-height: 40px;
+          width: 30px;
+          background: #ffc03d;
+          color: #432344;
+          &:hover{
+            background: #facc6d;
+          }
+          &.disabled{
+            background: #ffc03d;
+            &:hover{
+              background: #ffc03d;
+            }
+          }
+          &[data-view="years current"],
+          &[data-view="year current"],
+          &[data-view="month current"]{
+            width: calc(100% - 60px);
+          }
+        }
+      }
+    }
+  }
+  [data-view="week"],
+  [data-view="days"]{
+    li{
+      width: calc(#{$W} / 7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  [data-view="week"]{
+    li{
+      height: 40px;
+      font-size: 17px;
+      color: #432344;
+    }
+  }
+  [data-view="days"]{
+    li{
+      border-radius: 8px;
+      height: calc(#{$W} / 7);
+      font-size: 21px;
+      color: #432344;
+      display: flex;
+      align-content: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1em;
+      &:hover{
+        background: #d6dfef;
+        span{
+          color: #432344;
+        }
+      }
+      // 不能選取的天數
+      &.disabled,
+      &.muted{
+        color: #d6dfef;
+        &:hover{
+          color: #d6dfef;
+          background: none;
+          span{
+            color: #d6dfef;
+          }
+        }
+      }
+      // 當天
+      &.highlighted{
+        color: #d90606;
+        background: #ffddc2;
+        span{
+          color: #d90606;
+        }
+      }
+      // 選擇日期
+      &.picked{
+        color: #bb0909;
+        background: #ffc03d;
+        span{
+          color: #bb0909;
+        }
+        &:hover{
+          color: #fff;
+          span{
+            color: #fff;
+          }
+        }
+      }
+      span{
+        font-size: 13px;
+        line-height: 15px;
+        width: 100%;
+        pointer-events: none;
+        color: #d6dfef;
+        &.first{
+          color: #d51313;
+        }
+      }
+    }
+  }
+}

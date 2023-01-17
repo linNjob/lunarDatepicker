@@ -1,0 +1,185 @@
+body {
+  font-family: "Century Gothic", "PingFang TC", sans-serif;
+  color: #595757;
+}
+
+.dateBox {
+  position: relative;
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dateBox label {
+  width: 40px;
+  height: 40px;
+  font-size: 23px;
+  color: #ffc03d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: rgba(235, 111, 2, 0.65);
+}
+
+#dataTage {
+  height: 40px;
+  padding: 8px;
+  font-size: 21px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  border: 2px solid #e7eefc;
+  text-align: center;
+}
+
+#datepickerBox {
+  margin-top: 8px;
+}
+
+.datepicker-container {
+  border: 2px dashed #fab528;
+  width: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.datepicker-container:before, .datepicker-container:after {
+  display: none;
+}
+
+.datepicker-container .datepicker-panel ul {
+  width: 100%;
+}
+
+.datepicker-container .datepicker-panel ul:nth-child(1) li {
+  height: 40px;
+  font-size: 17px;
+  line-height: 40px;
+  width: 30px;
+  background: #ffc03d;
+  color: #432344;
+}
+
+.datepicker-container .datepicker-panel ul:nth-child(1) li:hover {
+  background: #facc6d;
+}
+
+.datepicker-container .datepicker-panel ul:nth-child(1) li.disabled {
+  background: #ffc03d;
+}
+
+.datepicker-container .datepicker-panel ul:nth-child(1) li.disabled:hover {
+  background: #ffc03d;
+}
+
+.datepicker-container .datepicker-panel ul:nth-child(1) li[data-view="years current"], .datepicker-container .datepicker-panel ul:nth-child(1) li[data-view="year current"], .datepicker-container .datepicker-panel ul:nth-child(1) li[data-view="month current"] {
+  width: calc(100% - 60px);
+}
+
+.datepicker-container [data-view="week"] li,
+.datepicker-container [data-view="days"] li {
+  width: calc(400px / 7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.datepicker-container [data-view="week"] li {
+  height: 40px;
+  font-size: 17px;
+  color: #432344;
+}
+
+.datepicker-container [data-view="days"] li {
+  border-radius: 8px;
+  height: calc(400px / 7);
+  font-size: 21px;
+  color: #432344;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1em;
+}
+
+.datepicker-container [data-view="days"] li:hover {
+  background: #d6dfef;
+}
+
+.datepicker-container [data-view="days"] li:hover span {
+  color: #432344;
+}
+
+.datepicker-container [data-view="days"] li.disabled, .datepicker-container [data-view="days"] li.muted {
+  color: #d6dfef;
+}
+
+.datepicker-container [data-view="days"] li.disabled:hover, .datepicker-container [data-view="days"] li.muted:hover {
+  color: #d6dfef;
+  background: none;
+}
+
+.datepicker-container [data-view="days"] li.disabled:hover span, .datepicker-container [data-view="days"] li.muted:hover span {
+  color: #d6dfef;
+}
+
+.datepicker-container [data-view="days"] li.highlighted {
+  color: #d90606;
+  background: #ffddc2;
+}
+
+.datepicker-container [data-view="days"] li.highlighted span {
+  color: #d90606;
+}
+
+.datepicker-container [data-view="days"] li.picked {
+  color: #bb0909;
+  background: #ffc03d;
+}
+
+.datepicker-container [data-view="days"] li.picked span {
+  color: #bb0909;
+}
+
+.datepicker-container [data-view="days"] li.picked:hover {
+  color: #fff;
+}
+
+.datepicker-container [data-view="days"] li.picked:hover span {
+  color: #fff;
+}
+
+.datepicker-container [data-view="days"] li span {
+  font-size: 13px;
+  line-height: 15px;
+  width: 100%;
+  pointer-events: none;
+  color: #d6dfef;
+}
+
+.datepicker-container [data-view="days"] li span.first {
+  color: #d51313;
+}
